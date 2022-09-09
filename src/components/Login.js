@@ -89,7 +89,7 @@ const Login = () => {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <Signup />
+        <Signup BaseURL={BaseURL} setIsOpen={setIsOpen}/>
       </Modal>
 
       {/* actual body code */}
@@ -97,7 +97,7 @@ const Login = () => {
       <div className=" flex bg-slate-200 justify-evenly h-screen items-center">
         {/* left side */}
         <div className="">
-          <img src="logo.png" alt="" className=" w-60" />
+          <img src="/images/logo.png" alt="" className=" w-60" />
           <div className="font-semibold text-xl">
             Connect with friends and the world around you on Facebook.
           </div>
