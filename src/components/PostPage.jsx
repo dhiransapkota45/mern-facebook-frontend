@@ -1,10 +1,18 @@
 import React from 'react'
 import Post from './Post'
+import Videos from './Videos'
+import People from './People'
+
+import { Routes, Route } from "react-router-dom"
 const PostPage = () => {
   return (
-    <div className='flex justify-center bg-gray-900 text-white '>
+    <div className='flex h-screen justify-center bg-gray-900 text-white '>
       <div className=' w-1/2'>
-        <Post />
+        <Routes>
+          <Route path='' element={<Post />} />
+          <Route path='videos' element={<Videos />} />
+          <Route path='people' element={<People />} />
+        </Routes>
       </div>
     </div>
   )

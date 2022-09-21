@@ -53,6 +53,7 @@ const Login = () => {
 
     if (response.success) {
       localStorage.setItem("authToken", response.authToken);
+      localStorage.setItem("userId", response.user._id);
       navigate("/");
     } else {
       setTimeout(() => {

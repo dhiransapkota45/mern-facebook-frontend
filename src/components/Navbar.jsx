@@ -8,6 +8,7 @@ import { SiFacebookgaming } from "react-icons/si"
 import { IoApps } from "react-icons/io5"
 import { FaFacebookMessenger } from "react-icons/fa"
 import { IoIosNotifications } from "react-icons/io"
+import {Link} from "react-router-dom"
 
 const Navbar = () => {
     // const initialState = {
@@ -37,10 +38,12 @@ const Navbar = () => {
                 </div>
             </div>
             <div className='text-blue-400 flex text-3xl items-center'>
+                <Link to="">
                 <AiFillHome name="option1" className='mx-12  cursor-pointer' />
-
-                <IoVideocam name="option2" className='mx-12  cursor-pointer' />
-                <HiUserGroup name='option3' className='mx-12 cursor-pointer' />
+                </Link>
+                <Link to="videos">
+                <IoVideocam name="option2" className='mx-12  cursor-pointer' /></Link>
+                <Link to="people"><HiUserGroup name='option3' className='mx-12 cursor-pointer' /></Link>
                 <SiFacebookgaming name='option4' className='mx-12 cursor-pointer' />
             </div>
             <div className='text-white text-2xl items-center flex'>

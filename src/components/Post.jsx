@@ -1,20 +1,13 @@
 import React from 'react'
 import { useState } from 'react'
+import { useContext } from 'react'
+import { NewContext } from '../context/context'  
 
-const Modal = () => {
-  return (
-    <>
-      <div className='w-screen h-screen fixed flex justify-center items-center bg-black opacity-50'>
-        <div>
-          Welcome to the modal
-        </div>
-      </div>
-    </>
-  )
-}
+
 
 const Post = () => {
-  const [openModal, setOpenModal] = useState(false)
+  const context1 = useContext(NewContext)
+  const {setOpenModal} = context1
   return (
     <>
       <div className='flex p-4 items-center '>
@@ -23,7 +16,6 @@ const Post = () => {
           What's on your mind, Username?
         </button>
       </div>
-      {openModal && <Modal />}
     </>
     )
 }
