@@ -29,8 +29,8 @@ const Navbar = () => {
     // }
     // console.log(active);
     return (
-        <div className='  flex bg-gray-800 p-3 justify-between'>
-            <div className='flex '>
+        <div className=' flex bg-gray-800 p-3 justify-between'>
+            <div className=' flex '>
                 <img className='w-12 mx-2' src="/images/facebook_logo.webp" alt="" />
                 <div className='p-2 flex rounded-3xl bg-gray-700 text-gray-200 items-center '>
                     <BsSearch className='mx-3' />

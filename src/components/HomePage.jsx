@@ -7,29 +7,31 @@ import PostPage from './PostPage'
 import { useContext } from "react"
 import { NewContext } from '../context/context'
 import Modal from './Modal'
+import { useState } from 'react'
 
 const HomePage = () => {
 
   const context1 = useContext(NewContext)
 
-  const { openModal } = context1
+  const { openModal, BaseURL } = context1
 
   const navigate = useNavigate()
   useEffect(() => {
     if (!localStorage.authToken) {
       navigate("/login")
     }
+
   }, [])
 
   return (
     <>
-      <div className=''>
-        <Navbar />
+      <div className='flex flex-col h-screen'>
+        <Navbar className=""/>
         {/* <Routes>
           <Route path='' element={<PostPage />} />
           <Route path='videos' element={<Videos />} />
         </Routes> */}
-        <PostPage />
+        <PostPage/>
       </div>
         <div>{openModal && <Modal />}</div>
     </>
