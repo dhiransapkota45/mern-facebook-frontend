@@ -32,7 +32,7 @@ const Post = () => {
             What's on your mind, Username?
           </button>
         </div>
-        <div className=' p-4'>
+        <div className='p-4'>
           {
             getPost.map((postdetails) => {
               return (<PostCard postdetails={postdetails} />)
