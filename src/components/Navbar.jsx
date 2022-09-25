@@ -9,8 +9,12 @@ import { IoApps } from "react-icons/io5"
 import { FaFacebookMessenger } from "react-icons/fa"
 import { IoIosNotifications } from "react-icons/io"
 import {Link} from "react-router-dom"
-
+import { NewContext2 } from '../context/context'
+import { useContext } from 'react'
 const Navbar = () => {
+
+    const {user1} = useContext(NewContext2)
+    console.log(user1);
     // const initialState = {
         // option1: false,
         // option2: false,
@@ -52,7 +56,7 @@ const Navbar = () => {
                 <FaFacebookMessenger className='mx-4  cursor-pointer' />
                 <IoIosNotifications className='text-3xl mx-4 cursor-pointer' />
 
-                <img className='w-12 h-12 border-2 rounded-3xl ' src="/images/profile.jpg" alt="profile" />
+                <img className='w-12 h-12 border-2 rounded-3xl ' src={user1 && `http://localhost:8000/${user1.profile_picture}`} alt="profile" />
 
             </div>
         </div>

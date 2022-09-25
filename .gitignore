@@ -6,6 +6,7 @@
 .pnp.js
 
 /public/images
+/public/sounds
 
 # testing
 /coverage

@@ -2,6 +2,7 @@ import { useState } from "react"
 import {createContext} from "react"
 
 const NewContext = createContext()
+const NewContext2 = createContext()
 
 const ContextComponent = ({childern}) => {
     const [openModal, setOpenModal] = useState(false)
@@ -16,4 +17,4 @@ const ContextComponent = ({childern}) => {
 }
 
 export default ContextComponent
-export {NewContext}
+export {NewContext, NewContext2}

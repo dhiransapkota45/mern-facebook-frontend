@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { useContext } from 'react'
-import { NewContext } from '../context/context'
+import { NewContext, NewContext2 } from '../context/context'
 import PostCard from './PostCard'
 
 
@@ -10,6 +10,7 @@ import PostCard from './PostCard'
 const Post = () => {
   const [getPost, setGetPost] = useState([])
   const context1 = useContext(NewContext)
+  const {user1} = useContext(NewContext2)
   const { setOpenModal, BaseURL } = context1
 
   useEffect(() => {
@@ -27,9 +28,9 @@ const Post = () => {
       <div className=''>
         
         <div className=' flex p-4 items-center '>
-          <img src="/images/profile.jpg" alt="profile" className='w-12 h-12 rounded-3xl mr-4' />
+          <img src={user1 && `http://localhost:8000/${user1.profile_picture}`} alt="profile" className='w-12 h-12 rounded-3xl mr-4' />
           <button onClick={() => setOpenModal(true)} className='bg-gray-800 p-2 rounded-3xl w-full text-gray-400  text-left hover:bg-gray-700'>
-            What's on your mind, Username?
+            What's on your mind, {user1 && user1.firstname}?
           </button>
         </div>
         <div className='p-4'>
